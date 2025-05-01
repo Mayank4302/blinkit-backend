@@ -1,61 +1,119 @@
-Blinkit Backend Application is a Node.js-based backend server designed to power an online grocery delivery platform similar to Blinkit. It manages core backend functionalities like user authentication, product management, cart and orders, secure payment integration, and real-time session handling.
+🛒 Blinkit-Backend-Project
+The Blinkit Backend Application is a full-featured Node.js and Express.js server designed to replicate the core functionalities of an online grocery delivery platform like Blinkit. It supports Google OAuth login, secure payments via Razorpay, and real-time session handling, with robust backend components built for scalability and production-level deployment.
+Blinkit Backend Project is a fully functional backend system developed for an online grocery delivery platform, inspired by the real-world Blinkit application. It is built using Node.js, Express, and MongoDB, and integrates features such as user authentication (Google OAuth), product management, cart operations, secure payment processing via Razorpay, and session management.
 
-The project includes secure Google OAuth login, Razorpay payment gateway for handling transactions, and MongoDB for storing user, product, and order data. With robust validation using Joi, image uploads via Multer, and JWT-based session management, the application ensures both performance and security for real-world use cases.
+This project is designed to simulate an admin-managed e-commerce backend system, enabling CRUD operations for products, secure login/signup, real-time payment gateway integration, and scalable database management using Mongoose.
 
-This backend can be easily connected with any frontend (React, HTML+CSS, etc.) to serve as a complete e-commerce solution for grocery or product-based platfor
+🚀 Key Features
+🔐 User Authentication using Google OAuth (via Passport.js)
 
+📦 Product & Category Management with Mongoose + MongoDB
 
-# Blinkit-Backend-Project
+💳 Secure Payments via Razorpay Gateway Integration
 
-Blinkit Backend Application is a full-featured backend server built using Node.js and Express.js, replicating the core functionalities of an online grocery delivery platform like Blinkit. It handles user authentication, product management, secure payments, session tracking, and more, with a scalable and modular architecture ideal for production environments.
+🖼️ Image Upload Support using Multer (for product images)
 
-Key features include:
+🛡️ JWT-Based Session Handling for user session management
 
-User Authentication using Google OAuth (via Passport.js)
+✅ Robust Form Validation using Joi
 
-Product & Category Management using Mongoose and MongoDB
+🌐 Easily integrable with any frontend (React, HTML/CSS, etc.)
 
-Secure Payments via Razorpay Integration
+🔐 Admin Login Info
+This platform is managed by a single admin (Blinkit Owner). Hence, admin registration is disabled.
 
-File Upload Support using Multer for product images
+Admin Login URL: http://localhost:3000/admin/login
 
-Session Handling and JWT-based token management
+Email: admin@blink.com
 
-Form Validation using Joi for input security
+Password: admin
 
+📌 Note: Admin credentials are hardcoded for demonstration and testing purposes only.
 
+⚙️ Environment Variables Setup
+Before running the application, create a .env file in the root directory with the following variables:
 
-set up this before running the application PORT=3000 MONGODB_URI=your_mongo_uri GOOGLE_CLIENT_ID=your_google_client_id GOOGLE_CLIENT_SECRET=your_google_client_secret SESSION_SECRET=your_secret_key RAZORPAY_KEY_ID=your_key_id RAZORPAY_KEY_SECRET=your_key_secret add this key and id to run application
-
-Steps to run applications
-✅ Step 1: Clone the Repository bash Copy Edit git clone https://github.com/your-username/blinkit-backend.git cd blinkit-backend
-
-✅ Step 2: Install Dependencies bash Copy Edit npm install This will install all packages from your package.json:
-
-express, mongoose, passport, razorpay, etc.
-
-✅ Step 3: Create a .env File At the root of the project, create a file named .env and add the following variables:
-
+env
+Copy
+Edit
 PORT=3000
-MONGODB_URI=your_mongo_uri
+MONGODB_URI=your_mongodb_uri
 GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_secret
-SESSION_SECRET=some_secret_key
-RAZORPAY_KEY_ID=your_razorpay_key
-RAZORPAY_KEY_SECRET=your_razorpay_secret
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+SESSION_SECRET=your_session_secret
+RAZORPAY_KEY_ID=your_razorpay_key_id
+RAZORPAY_KEY_SECRET=your_razorpay_key_secret
+🛠️ Getting Started
 
-set all these apikeys and ids__
+🔧 Tech Stack & Dependencies
+Node.js
+
+Express.js
+
+MongoDB + Mongoose
+
+Passport.js (Google OAuth2.0)
+
+Razorpay API
+
+JWT Authentication
+
+Session and Cookie Management
+
+Multer (File uploads)
+
+EJS (for views, if applicable)
+
+✅ Step 1: Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/Shashank6903/Blinkit-Backend-Project.git
+cd Blinkit-Backend-Project
+
+✅ Step 2: Install Dependencies
+bash
+Copy
+Edit
+npm install
+Installs all dependencies: express, mongoose, passport, razorpay, etc.
+
+✅ Step 3: Add Environment Variables
+Create a .env file as described.
+env
+Copy
+Edit
+PORT=3000
+MONGODB_URI=your_mongodb_uri
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+SESSION_SECRET=your_session_secret
+RAZORPAY_KEY_ID=your_razorpay_key_id
+RAZORPAY_KEY_SECRET=your_razorpay_key_secret
 
 
-✅ Step 4: Start MongoDB Server Make sure your MongoDB server is running:
+✅ Step 4: Start MongoDB Server
+If using local MongoDB, run:
 
-If local: run mongod
+bash
+Copy
+Edit
+mongod
+If using MongoDB Atlas, ensure your MONGODB_URI is correct.
 
-If cloud (MongoDB Atlas): just make sure your MONGODB_URI is correct
+✅ Step 5: Start the Application
+bash
+Copy
+Edit
+npm start
+Application will run on: http://localhost:3000
 
-✅ Step 5: Run the Application bash Copy Edit npm start By default, it will start on: 👉 http://localhost:3000
+✅ Step 6: Test the Endpoints
+Login via Google:
+Visit → http://localhost:3000/auth/google
 
-✅ Step 6: Test Endpoints You can now: Visit /auth/google to login via Google
+Admin login:
+Visit → http://localhost:3000/admin/login
 
 ![image2](https://github.com/user-attachments/assets/3097cd44-0ba7-47c0-9adb-891369e5c170)
 
